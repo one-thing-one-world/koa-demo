@@ -25,6 +25,7 @@ router.get('/', async (ctx: { body: string }, next: any) => {
   const redisData = await redis.get('myKey')
   const data = await querry('select * from users')
   if (redisData) {
+    const a = 123
     console.log(redisData, 'redisDatad')
   } else {
     void redis.set('myKey', 222)
