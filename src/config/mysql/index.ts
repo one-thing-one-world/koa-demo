@@ -1,13 +1,13 @@
-import mysql from "mysql"
+import mysql from 'mysql'
 
 export const config = {
   port: 3000,
   database: {
-    DATABASE: "jinshan",
-    USERNAME: "liujuncai",
-    PASSWORD: "liujuncai",
-    PORT: "3306",
-    HOST: "localhost",
+    DATABASE: 'jinshan',
+    USERNAME: 'liujuncai',
+    PASSWORD: 'liujuncai',
+    PORT: '3306',
+    HOST: 'localhost',
   },
 }
 
@@ -24,7 +24,7 @@ export const querry = (sqls: any, sqlParams: any[] = [undefined]) =>
       // if (err) rej(err) // not connected!
       if (err) throw err
       // Use the connection
-
+      const ar = 123
       connection.query(sqls, sqlParams, (error, results, fields) => {
         res(results)
         // When done with the connection, release it.
