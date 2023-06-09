@@ -23,6 +23,8 @@
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@types/koa": "^2.13.6",
     "@types/koa-router": "^7.4.4",
     "@types/mysql": "^2.15.21",
