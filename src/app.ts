@@ -22,6 +22,13 @@ import './config/googleAuth2/index'
 // })
 
 const router = new Router()
+app.use(async (ctx, next) => {
+  // Log the request method, URL, and headers
+  console.log(`${ctx.request.method} ${ctx.request.url}`)
+  // console.log(ctx.request.headers)
+
+  await next()
+})
 
 router.get('/', async (ctx: { body: string }, next: any) => {
   // const redisData = await redis.get('myKey')
@@ -33,6 +40,7 @@ router.get('/', async (ctx: { body: string }, next: any) => {
   //   void redis.set('myKey', 222)
   // }
   // console.log(redisData, 'redisData', data)
+  console.log(123)
   ctx.body = 'hello KOAaa'
 })
 
@@ -54,5 +62,5 @@ router.get('/auth/google/callback', passport.authenticate('google', { failureRed
 
 app.use(router.routes())
 app.listen(3000, () => {
-  console.log('listen 3000 OK')
+  console.log('listen at: http://localhost:3000')
 })
