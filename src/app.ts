@@ -51,7 +51,7 @@ app.use(session(app))
 app.use(passport.initialize())
 app.use(passport.session())
 
-router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }))
+router.get('/auth/google', passport.authenticate('google', { scope: ['email'] }))
 
 router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), function (ctx) {
   // Successful authentication, redirect home.
