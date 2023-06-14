@@ -8,7 +8,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: 'http://localhost:3000/auth/google/callback',
+      callbackURL: 'http://101.37.83.146:3000/auth/google/callback',
     },
     function (accessToken, refreshToken, profile, cb) {
       // Callback function to handle user profile data
