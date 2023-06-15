@@ -60,8 +60,8 @@ router.get(
   passport.authenticate(
     'google',
     {
-      successRedirect: '/',
-      failureRedirect: '/',
+      successRedirect: '/login',
+      failureRedirect: '/login',
     },
     function (ctx) {
       console.log(ctx, 'router.get/callbackctx/auth/google')
