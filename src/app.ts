@@ -7,7 +7,7 @@ import { querry } from './config/mysql/index'
 import session from 'koa-session'
 import passport from './config/googleAuth2/index'
 const app = new Koa()
-
+import cors from 'koa2-cors'
 import './config/googleAuth2/index'
 // const redis = new Redis({
 //   port: 6379,
@@ -62,6 +62,7 @@ router.get('/auth/google/callback', passport.authenticate('google', { failureRed
 })
 
 // ===>
+app.use(cors())
 
 app.use(router.routes())
 app.use(router.allowedMethods())
