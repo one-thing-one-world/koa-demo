@@ -46,7 +46,7 @@ router.get('/', async (ctx: { body: string }, next: any) => {
 
 // ===>
 
-app.keys = ['your-session-secret']
+app.keys = ['koa.sess']
 app.use(session(app))
 app.use(passport.initialize())
 app.use(passport.session())
