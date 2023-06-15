@@ -61,7 +61,7 @@ router.get(
     'google',
     {
       successRedirect: '/',
-      failureRedirect: '/auth/google',
+      failureRedirect: '/',
     },
     function (ctx) {
       console.log(ctx, 'router.get/callbackctx/auth/google')
