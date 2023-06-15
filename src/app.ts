@@ -58,8 +58,8 @@ router.get('/auth/google', passport.authenticate('google', { scope: ['email', 'p
 router.get(
   '/auth/google/callback',
   passport.authenticate('google', {
-    successRedirect: '/hello',
-    failureRedirect: '/hello',
+    successRedirect: '/',
+    failureRedirect: '/auth/google',
   })
 )
 

@@ -17,7 +17,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: 'https://www.runoob.com/docker/docker-container-usage.html',
+      callbackURL: 'http://www.flyfrag.cn:3000/auth/google/callback',
     },
     function (accessToken, refreshToken, profile, cb) {
       // Callback function to handle user profile data
