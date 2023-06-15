@@ -55,11 +55,13 @@ router.get('/auth/google', passport.authenticate('google', { scope: ['email'] })
   console.log(ctx, 'callbackctx/auth/google')
 })
 
-router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), function (ctx) {
-  // Successful authentication, redirect home.
-  console.log(ctx, 'callbackctx')
-  ctx.redirect('/')
-})
+router.get(
+  '/auth/google/callback',
+  passport.authenticate('google', {
+    successRedirect: '/',
+    failureRedirect: '/',
+  })
+)
 
 // ===>
 app.use(cors())
