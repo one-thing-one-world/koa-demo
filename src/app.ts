@@ -51,7 +51,7 @@ app.use(session(app))
 app.use(passport.initialize())
 app.use(passport.session())
 
-router.get('/auth/google', passport.authenticate('google', { scope: ['email'] }), function (ctx) {
+router.get('/auth/google', passport.authenticate('google', { scope: ['email', 'profile'] }), function (ctx) {
   console.log(ctx, 'callbackctx/auth/google')
 })
 
