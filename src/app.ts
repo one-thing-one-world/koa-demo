@@ -8,7 +8,7 @@ import session from 'koa-session'
 import passport from './config/googleAuth2/index'
 const app = new Koa()
 import cors from 'koa2-cors'
-import './config/googleAuth2/index'
+// import './config/googleAuth2/index'
 // const redis = new Redis({
 //   port: 6379,
 //   host: '127.0.0.1',
