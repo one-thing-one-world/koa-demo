@@ -4,13 +4,13 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
 const GOOGLE_CLIENT_ID = '1095594983604-8noehb0pm6hhf97u7sgvg793noisjjup.apps.googleusercontent.com'
 const GOOGLE_CLIENT_SECRET = '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'
 
-passport.serializeUser<any, any>((user, done) => {
-  // done(null, user)
-})
+// passport.serializeUser<any, any>((user, done) => {
+//   // done(null, user)
+// })
 
-passport.deserializeUser<any, any>((user, done) => {
-  // done(null, user)
-})
+// passport.deserializeUser<any, any>((user, done) => {
+//   // done(null, user)
+// })
 
 passport.use(
   new GoogleStrategy(
