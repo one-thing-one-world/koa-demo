@@ -5,7 +5,7 @@ import Redis from 'ioredis'
 import mysql from 'mysql'
 import { querry } from './config/mysql/index'
 import session from 'koa-session'
-import passport from 'koa-passport'
+import passport from './config/googleAuth2/index'
 const app = new Koa()
 
 import './config/googleAuth2/index'
@@ -64,6 +64,8 @@ router.get('/auth/google/callback', passport.authenticate('google', { failureRed
 // ===>
 
 app.use(router.routes())
+app.use(router.allowedMethods())
+
 app.listen(3000, () => {
   console.log('listen at: http://localhost:3000')
 })
