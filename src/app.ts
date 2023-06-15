@@ -57,10 +57,16 @@ router.get('/auth/google', passport.authenticate('google', { scope: ['email', 'p
 
 router.get(
   '/auth/google/callback',
-  passport.authenticate('google', {
-    successRedirect: '/',
-    failureRedirect: '/auth/google',
-  })
+  passport.authenticate(
+    'google',
+    {
+      successRedirect: '/',
+      failureRedirect: '/auth/google',
+    },
+    function (ctx) {
+      console.log(ctx, 'router.get/callbackctx/auth/google')
+    }
+  )
 )
 
 // ===>
